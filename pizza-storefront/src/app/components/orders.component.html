@@ -1,0 +1,12 @@
+
+<h2>Orders for {{email}}</h2>
+<h3 *ngIf="details.length<1" >No Orders</h3>
+<div  *ngFor="let i of details"> 
+
+    <div>
+        <p>Order Id: {{i.orderId}}</p>
+        <p>Total Cost: {{i.amount}}</p>
+    </div>
+</div>
+
+<button type="button" [routerLink]="['/']">Back</button>
